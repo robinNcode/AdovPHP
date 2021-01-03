@@ -1,4 +1,5 @@
 <?php
+    namespace App\Config;
     /**
      * Creating the object of Route class
      * @var $routes

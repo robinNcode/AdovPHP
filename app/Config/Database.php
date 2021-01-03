@@ -1,4 +1,7 @@
 <?php
+  namespace App\Config;
+  use PDO;
+  
     class Database {
 
         protected static $host = 'localhost';
@@ -11,6 +14,7 @@
           $pdo = new PDO("mysql:host=".self::$host.";dbname=".self::$dbName, self::$user, self::$password);;
           $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
           return $pdo;
         }
       

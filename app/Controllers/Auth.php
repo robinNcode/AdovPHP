@@ -1,4 +1,6 @@
 <?php
+		use App\Models\ImageModel;
+
     class Auth extends BaseController{
 
         protected $image = null;
@@ -14,10 +16,9 @@
         public function index(){
             
             echo '<pre>';
-            var_dump($this->image->getImage());
+            dd($this->image->getImage());
             echo '</pre>';
-            
-            die();
+
             echo include('app/Views/Login/Login.php');
         }
 

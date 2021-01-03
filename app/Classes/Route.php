@@ -5,12 +5,12 @@
      */
     class Route{
 
-        public static $validRoutes = array();
+        public $validRoutes = array();
 
-        public static function get($route,$function){
-            self::$validRoutes = $route;
+        public function get($route,$function){
+            $this->validRoutes = $route;
 
-            //var_dump(self::$validRoutes);
+            var_dump( $this->validRoutes);
             if($_GET['url'] == $route){
                 $function->__invoke();
             }
