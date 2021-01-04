@@ -1,8 +1,9 @@
-<?php
+<?php namespace App\Config;
+use PDO;
     class Database {
 
         protected static $host = 'localhost';
-        protected static $dbName = 'db';
+        protected static $dbName = 'sado';
         protected static $user = 'root';
         protected static $password = '';
 
@@ -14,7 +15,7 @@
           return $pdo;
         }
       
-        public static function query($query, $params = array()) {
+        public function query($query, $params = array()) {
           $stmt = self::connect()->prepare($query);
           $stmt->execute($params);
           $data = $stmt->fetchAll();

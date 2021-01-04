@@ -1,4 +1,4 @@
-<?php
+<?php namespace App\Classes;
     /**
      * @author robinNcode
      * To control all routes in this project

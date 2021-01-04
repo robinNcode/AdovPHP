@@ -9,12 +9,10 @@ if (!(PHP_VERSION_ID >= 70300)) {
 }
 
 $missingExtensions = array();
-extension_loaded('curl') || $missingExtensions[] = 'curl';
-extension_loaded('gd') || $missingExtensions[] = 'gd';
 extension_loaded('intl') || $missingExtensions[] = 'intl';
 extension_loaded('json') || $missingExtensions[] = 'json';
 extension_loaded('mbstring') || $missingExtensions[] = 'mbstring';
-extension_loaded('mysqli') || $missingExtensions[] = 'mysqli';
+extension_loaded('pdo') || $missingExtensions[] = 'pdo';
 
 if ($missingExtensions) {
     $issues[] = 'Your Composer dependencies require the following PHP extensions to be installed: ' . implode(', ', $missingExtensions);

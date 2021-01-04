@@ -1,4 +1,5 @@
-<?php
+<?php namespace App\Controllers;
+use App\Models\ImageModel;
     class Auth extends BaseController{
 
         protected $image = null;
@@ -8,20 +9,20 @@
          */
         public function __construct()
         {
-            $this->image = new ImageModel();
+            self::$image = new ImageModel();
         }
 
-        public function index(){
+        public static function index(){
             
             echo '<pre>';
-            var_dump($this->image->getImage());
+            var_dump(self::$image->getImage());
             echo '</pre>';
             
             die();
             echo include('app/Views/Login/Login.php');
         }
 
-        public function store(){
+        public static function store(){
             echo '<pre>';
             var_dump($_POST);
             echo '</pre>';

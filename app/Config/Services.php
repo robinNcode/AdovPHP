@@ -27,4 +27,9 @@
             return $base_url;
         }
     }
+
+    /**
+     * CSRF security ...
+     */
+    
 ?>
