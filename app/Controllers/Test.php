@@ -1,7 +1,6 @@
-<?php
-    class Test{
-        
-       
-    }
+<?php namespace App\Controllers;
 
-?>
+class Test extends BaseController
+{
+
+}

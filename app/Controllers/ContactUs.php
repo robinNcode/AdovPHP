@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
 
-    class AboutUs extends BaseController{
-        
-    }
+class ContactUs extends BaseController
+{
+
+}

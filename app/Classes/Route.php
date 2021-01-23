@@ -1,21 +1,21 @@
 <?php namespace App\Classes;
-    /**
-     * @author robinNcode
-     * To control all routes in this project
-     */
-    class Route{
 
-        public static $validRoutes = array();
+/**
+ * @author robinNcode
+ * To control all routes in this project
+ */
+class Route
+{
 
-        public static function get($route,$function){
-            self::$validRoutes = $route;
+    public static $validRoutes = array();
 
-            //var_dump(self::$validRoutes);
-            if($_GET['url'] == $route){
-                $function->__invoke();
-            }
-            
-            
+    public static function get($route, $function)
+    {
+        self::$validRoutes = $route;
+
+        //var_dump(self::$validRoutes);
+        if ($_GET['url'] == $route) {
+            $function->__invoke();
         }
     }
-?>
+}
